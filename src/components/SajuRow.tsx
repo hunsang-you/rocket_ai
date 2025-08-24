@@ -16,7 +16,7 @@ export default function SajuRow({
 }: SajuRowProps) {
   return (
     <tr className={borderBottom ? "border-b-2" : "border-b-1 border-gray-300"}>
-      {/* 제목 영역 */}
+      {/* 제목 영역, 1열 부분 */}
 
       <td className="bg-[#F5F3EC] text-center text-xs font-bold p-2 max-w-[6rem] ">
         <div className="flex flex-col justify-center">
