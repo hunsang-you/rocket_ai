@@ -13,38 +13,44 @@ export default function SajuRow({
   subtitle,
   items,
   borderBottom = true,
+  isFirstRow = false,
 }: SajuRowProps) {
   return (
-    <tr className={borderBottom ? "border-b-2" : "border-b-1 border-gray-300"}>
-      {/* 제목 영역, 1열 부분 */}
-
-      <td className="bg-[#F5F3EC] text-center text-xs font-bold p-2 max-w-[6rem] ">
+    <tr
+      className={`${
+        borderBottom ? "border-b-2" : "border-b-1 border-gray-300"
+      } ${isFirstRow ? "border-t-0" : ""}`}
+    >
+      {/* 제목영역, 1열 부분*/}
+      <td className="bg-[#F5F3EC] text-center text-xs font-bold p-2 max-w-[6rem]">
         <div className="flex flex-col justify-center">
           <span>{title}</span>
           {subtitle && <span>({subtitle})</span>}
         </div>
       </td>
 
-      {/* 아이템 영역 */}
+      {/* 나머지 셀: 첫 번째 행이면 #F5F3EC, 아니면 #FDFDFB */}
       {items.map((item, idx) => {
         if (typeof item === "string") {
           // 여러 항목이 , 로 이어져 있는 경우 split
           const parts = item.split(",").map((str) => str.trim());
-
           return (
             <td
               key={idx}
-              className={`border border-black bg-[#FDFDFB] font-bold text-xs text-center p-2 align-middle border-r-gray-300`}
+              className={`border border-black font-bold text-xs text-center p-2 align-middle border-r-gray-300 ${
+                isFirstRow ? "bg-[#F5F3EC] border-t-0 " : "bg-[#FDFDFB]"
+              }`}
             >
               <div className="flex flex-col items-center">
                 {parts.map((part, pIdx) => {
                   const match = part.match(/^(.+?)\s*\((.+)\)$/);
                   const data_1 = match ? match[1] : part;
                   const data_2 = match ? match[2] : "";
-
                   return (
-                    <div key={pIdx} className="flex flex-col items-center ">
-                      <span>{data_1}</span>
+                    <div key={pIdx} className="flex flex-col items-center">
+                      <span className={`${isFirstRow ? "text-base" : ""}`}>
+                        {data_1}
+                      </span>
                       {data_2 && <span>({data_2})</span>}
                     </div>
                   );
@@ -57,8 +63,10 @@ export default function SajuRow({
         // 객체일 경우 (천간/지지)
         return (
           <td
-            className="border border-black border-b-gray-300 bg-[#FDFDFB] font-bold text-xs text-center p-2 border-r-[#8A8A8A]"
             key={idx}
+            className={
+              "border border-black border-b-gray-300 font-bold text-xs text-center p-2 border-r-[#8A8A8A] "
+            }
           >
             <CellInnerBox
               bgColor={item.bgColor}

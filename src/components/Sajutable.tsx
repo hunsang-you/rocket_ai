@@ -13,6 +13,7 @@ export default function Sajutable() {
               subtitle={row.subtitle}
               items={row.items}
               borderBottom={row.borderBottom}
+              isFirstRow={idx === 0}
             />
           ))}
         </tbody>

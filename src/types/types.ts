@@ -5,6 +5,7 @@ export interface SajuRowProps {
   borderBottom?: boolean;
   bgColor?: string;
   textColor?: string;
+  isFirstRow?: boolean; // 첫 번째 행인지 여부
 }
 
 export interface CellBoxProps {
