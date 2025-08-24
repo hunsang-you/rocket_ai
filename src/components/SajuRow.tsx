@@ -65,7 +65,7 @@ export default function SajuRow({
           <td
             key={idx}
             className={
-              "border border-black border-b-gray-300 font-bold text-xs text-center p-2 border-r-[#8A8A8A] "
+              "border border-black bg-[#FDFDFB] border-b-gray-300 font-bold text-xs text-center p-2 border-r-[#8A8A8A] "
             }
           >
             <CellInnerBox
