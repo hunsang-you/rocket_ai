@@ -1,0 +1,69 @@
+[
+  {
+    "title": "",
+    "subtitle": "",
+    "items": ["時", "日", "月", "年"]
+  },
+  {
+    "title": "十星",
+    "subtitle": "십성",
+    "items": ["傷官 (상관)", "比肩 (비견)", "傷官 (상관)", "傷官 (상관)"]
+  },
+  {
+    "title": "天干",
+    "subtitle": "천간",
+    "items": [
+      { "bgColor": "#2F2F2F", "label": "임", "hanja": "壬", "subText": "한자" },
+      { "bgColor": "#C23030", "label": "정", "hanja": "丁", "subText": "한자" },
+      { "bgColor": "#2F2F2F", "label": "계", "hanja": "癸", "subText": "한자" },
+      { "bgColor": "#2F2F2F", "label": "계", "hanja": "癸", "subText": "한자" }
+    ],
+    "borderBottom": false
+  },
+  {
+    "title": "地支",
+    "subtitle": "지지",
+    "items": [
+      { "bgColor": "#18868C", "label": "인", "hanja": "寅", "subText": "한자" },
+      { "bgColor": "#C23030", "label": "사", "hanja": "巳", "subText": "한자" },
+      { "bgColor": "#2F2F2F", "label": "해", "hanja": "亥", "subText": "한자" },
+      {
+        "bgColor": "#FDFDFB",
+        "textColor": "black",
+        "label": "유",
+        "hanja": "酉",
+        "subText": "한자"
+      }
+    ]
+  },
+  {
+    "title": "十星",
+    "subtitle": "십성",
+    "items": ["比肩 (비견)", "劫財 (겁재)", "食神 (식신)", "偏財 (편재)"]
+  },
+  {
+    "title": "十二運星",
+    "subtitle": "십이운성",
+    "items": ["死 (사)", "帝旺 (제왕)", "胎 (태)", "長生 (장생)"]
+  },
+  {
+    "title": "十二神殺",
+    "subtitle": "십이신살",
+    "items": [
+      "劫殺 (겁살)",
+      "地殺 (지살)",
+      "驛馬殺 (역마살)",
+      "將星殺 (장성살)"
+    ]
+  },
+  {
+    "title": "貴人",
+    "subtitle": "귀인",
+    "items": [
+      "(없음)",
+      "(없음)",
+      "天乙 (천을귀인)",
+      "天乙 (천을귀인), 太極 (태극귀인), 文昌 (문창귀인)"
+    ]
+  }
+]
