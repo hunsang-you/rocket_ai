@@ -1,19 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Hanseokbong";
-  src: url("/fonts/hanseokbongR.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Hanseokbong";
-  src: url("/fonts/hanseokbongB.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
 body {
-  font-family: "Hanseokbong", sans-serif;
+  font-family: var(--font-hanseokbong), sans-serif;
 }

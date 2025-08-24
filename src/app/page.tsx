@@ -18,7 +18,7 @@ export default function Page() {
     "김로켓",
   ]);
 
-  const [randomName, setRandomName] = useState("");
+  const [randomName, setRandomName] = useState<string | null>(null);
 
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * userName.length);
@@ -36,6 +36,7 @@ export default function Page() {
             width={375}
             height={774}
             className="w-full h-auto"
+            priority
           />
         </div>
 
@@ -58,6 +59,7 @@ export default function Page() {
             width={351}
             height={774}
             className=" h-auto"
+            loading="lazy"
           />
         </div>
       </section>
@@ -71,6 +73,7 @@ export default function Page() {
             width={375}
             height={774}
             className="w-full h-auto"
+            loading="lazy"
           />
         </div>
 
@@ -92,6 +95,7 @@ export default function Page() {
             width={375}
             height={774}
             className="w-full"
+            loading="lazy"
           />
         </div>
         <div className="w-full">
