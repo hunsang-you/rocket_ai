@@ -22,6 +22,11 @@ const hanseokbong = localFont({
 export const metadata: Metadata = {
   title: "로켓AI_운세박사",
   description: "로켓AI_운세박사",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
 };
 
 export default function RootLayout({
